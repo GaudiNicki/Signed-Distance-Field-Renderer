@@ -381,7 +381,8 @@ function main() {
 
     /*sdf = union(sdf_checkerboard, sdf_rect);*/
 
-    show(film.trigger(camera, new RayMarcher(sdf, background), 16));
+	// increase numSamples to get a sharper result with longer processing
+    show(film.trigger(camera, new RayMarcher(sdf, background), 2));
 }
 
 window.onload = main;
